@@ -663,20 +663,202 @@ img {
 }
 
 @media (max-width: 768px) {
+
+    /* Layout Adjustments */
+    :root {
+        --spacing-lg: 20px;
+        --spacing-xl: 40px;
+        --spacing-xxl: 60px;
+        --container-width: 100%;
+        --header-height: 70px;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    /* Navigation */
+    .navbar {
+        height: var(--header-height);
+    }
+
+    .nav-links {
+        position: fixed;
+        right: 0;
+        top: var(--header-height);
+        height: calc(100vh - var(--header-height));
+        background: rgba(15, 15, 30, 0.98);
+        backdrop-filter: blur(15px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        padding-top: 40px;
+        transform: translateX(100%);
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+        opacity: 0;
+        transform: translateX(20px);
+        transition: all 0.3s ease;
+    }
+
+    .nav-links.active li {
+        opacity: 1;
+        transform: translateX(0);
+        transition-delay: 0.2s;
+    }
+
+    .nav-links a {
+        font-size: 1.5rem;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: var(--color-text);
+        border-radius: 2px;
+    }
+
+    .hamburger.toggle span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.toggle span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.toggle span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
     .back-to-top {
         position: static;
         margin: var(--spacing-lg) auto 0;
     }
+
+    /* Hero Section */
+    .hero-title {
+        font-size: clamp(2.5rem, 10vw, 4rem);
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    /* Story Section */
+    .story-block,
+    .story-block.reverse {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .story-text {
+        padding: 0;
+    }
+
+    .story-text h3 {
+        font-size: 1.8rem;
+    }
+
+    .story-location {
+        justify-content: center;
+        display: flex;
+    }
+
+    .story-image {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .skill-card {
+        padding: 30px 20px;
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    /* Contact Section */
+    .contact-container {
+        margin-top: 100px;
+        padding-bottom: 60px;
+    }
+
+    .contact-content {
+        padding: 0 10px;
+    }
+
+    .social-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .social-icon {
+        width: 100%;
+        display: block;
+    }
+
+    /* Finale Image */
+    .story-finale-container {
+        margin-bottom: 150px;
+    }
+
+    .finale-img {
+        /* Reset any excessive stretching on mobile where it looks weird */
+        transform: none !important;
+        width: 100%;
+    }
+
+    .finale-content h3 {
+        font-size: 2rem;
+    }
 }
 
-.hamburger.toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
+/* Small Mobile Adjustments */
+@media (max-width: 380px) {
+    .hero-title {
+        font-size: 2rem;
+    }
 
-.hamburger.toggle .line2 {
-    opacity: 0;
-}
-
-.hamburger.toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
+    .btn {
+        padding: 10px 24px;
+        font-size: 0.9rem;
+    }
 }
