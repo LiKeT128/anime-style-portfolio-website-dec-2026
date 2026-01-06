@@ -253,14 +253,16 @@
 	
 <script type="module">
     import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+    
     Chatbot.init({
         chatflowid: "b32802b1-a970-4969-af75-2a40a25b2276",
         apiHost: "https://isagi-egoist-bot.onrender.com",
         theme: {
             button: {
-                backgroundColor: "transparent", // Кнопка сама по себе невидима
-                customIconSrc: "https://i.pinimg.com/736x/5c/ee/a0/5ceea004dc14df72717b12398603de63.jpg", // Ссылка на Глаз (замени на свою, если хочешь именно этот файл)
+                backgroundColor: "transparent",
+                customIconSrc: "https://i.pinimg.com/736x/5c/ee/a0/5ceea004dc14df72717b12398603de63.jpg",
                 size: "large",
+                dragAndDrop: true,
             },
             chatWindow: {
                 backgroundColor: "#0F0F1E",
@@ -270,69 +272,65 @@
                 height: 500,
                 width: 350,
                 fontSize: 15,
-                userMessage: {
-                    backgroundColor: "#00D9FF",
-                    textColor: "#000000",
-                    showAvatar: true,
-                },
-                botMessage: {
-                    backgroundColor: "#1A1A2E",
-                    textColor: "#ffffff",
-                    showAvatar: true,
-                    avatarSrc: "https://i.pinimg.com/1200x/1e/6b/78/1e6b78183c62f2415559023e61a25ac4.jpg",
-                },
-                textInput: {
-                    placeholder: "Challenge my logic...",
-                    backgroundColor: "#1A1A2E",
-                    textColor: "#ffffff",
-                    sendButtonColor: "#00D9FF",
-                }
+                userMessage: { backgroundColor: "#00D9FF", textColor: "#000000", showAvatar: true },
+                botMessage: { backgroundColor: "#1A1A2E", textColor: "#ffffff", showAvatar: true, avatarSrc: "https://i.pinimg.com/1200x/1e/6b/78/1e6b78183c62f2415559023e61a25ac4.jpg" },
+                textInput: { placeholder: "Challenge my logic...", backgroundColor: "#1A1A2E", textColor: "#ffffff", sendButtonColor: "#00D9FF" }
             }
         }
     })
+
+    // --- ТРОЯНСКИЙ КОНЬ (CSS INJECTION) ---
+    // Этот скрипт каждые 100мс проверяет, появилась ли кнопка, 
+    // и жестко вшивает внутрь нее новые стили.
+    
+    const hackStyles = `
+        /* ГИГАНТСКАЯ КНОПКА */
+        .flowise-chatbot-container button {
+            width: 140px !important;  /* <-- МЕНЯЙ РАЗМЕР ТУТ */
+            height: 140px !important; /* <-- И ТУТ */
+            border: none !important;
+            box-shadow: 0 0 30px rgba(0, 217, 255, 0.8) !important;
+        }
+        
+        /* КАРТИНКА ГЛАЗА */
+        .flowise-chatbot-container button img {
+            width: 100% !important;
+            height: 100% !important;
+            transform: scale(1.05) !important;
+            border-radius: 50% !important;
+        }
+
+        /* ФИКС ПРОЗРАЧНЫХ КНОПОК ВНУТРИ (REFRESH) */
+        .chatbot-header-icon {
+            background-color: #1A1A2E !important;
+            border-radius: 4px !important;
+            padding: 4px !important;
+            margin-left: 5px !important;
+        }
+        .chatbot-header-icon svg {
+            fill: white !important;
+            width: 20px !important;
+            height: 20px !important;
+        }
+    `;
+
+    const intervalId = setInterval(() => {
+        // Ищем главного родителя (Shadow Host)
+        const host = document.querySelector('flowise-chatbot');
+        
+        if (host && host.shadowRoot) {
+            // Проверяем, не внедрили ли мы уже стили
+            if (!host.shadowRoot.querySelector('#isagi-hack-styles')) {
+                const styleSheet = document.createElement('style');
+                styleSheet.id = 'isagi-hack-styles';
+                styleSheet.textContent = hackStyles;
+                host.shadowRoot.appendChild(styleSheet);
+                console.log("Isagi Hack Injected Successfully");
+                clearInterval(intervalId); // Останавливаем проверку, раз все сработало
+            }
+        }
+    }, 100); // Проверяем 10 раз в секунду
 </script>
-
-<style>
-    /* 1. ГЛАЗ МЕТАВИДЕНИЯ */
-    .flowise-chatbot-container button {
-        width: 440px !important;   /* Размер глаза */
-        height: 440px !important;
-        border: none !important;  /* Убираем рамки */
-        box-shadow: 0 0 25px rgba(0, 217, 255, 0.9) !important; /* Сильное свечение */
-        border-radius: 50%;
-        overflow: hidden; /* Обрезаем картинку по кругу */
-        padding: 0 !important;
-    }
-
-    /* Картинка глаза на всю кнопку */
-    .flowise-chatbot-container button img {
-        width: 100% !important;
-        height: 100% !important;
-        object-fit: cover !important; /* Чтобы глаз заполнил весь круг без искажений */
-        transform: scale(1.1); /* Чуть приближаем, чтобы не было белых краев */
-    }
-
-    /* Анимация пульсации (Опционально: глаз "дышит") */
-    @keyframes pulse {
-        0% { box-shadow: 0 0 20px rgba(0, 217, 255, 0.8); }
-        50% { box-shadow: 0 0 35px rgba(0, 217, 255, 1); }
-        100% { box-shadow: 0 0 20px rgba(0, 217, 255, 0.8); }
-    }
-    .flowise-chatbot-container button {
-        animation: pulse 3s infinite;
-    }
-
-    /* Остальные фиксы для окна чата */
-    .flowise-chatbot-container .chatbot-header-icon {
-        background-color: #1A1A2E !important; 
-        border-radius: 5px !important;
-        padding: 5px !important;
-    }
-    .flowise-chatbot-container .chatbot-header-icon svg {
-        fill: #ffffff !important;
-        stroke: #ffffff !important;
-    }
-</style>
 	
 </body>
 
