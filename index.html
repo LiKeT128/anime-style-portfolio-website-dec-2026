@@ -256,44 +256,69 @@
     Chatbot.init({
         chatflowid: "b32802b1-a970-4969-af75-2a40a25b2276",
         apiHost: "https://isagi-egoist-bot.onrender.com",
-		theme: {
-        button: {
-            backgroundColor: "#00D9FF", // Ярко-голубой цвет кнопки (глаз Исаги)
-            customIconSrc: "https://i.imgur.com/9SGiSPH.png", // (Опционально) Твоя иконка кнопки
-			size: "large",
-        },
-        chatWindow: {
-		  backgroundColor: "#0F0F1E",
-            title: "Isagi AI", // Заголовок вместо "Hi there!"
-            titleAvatarSrc: "https://i.pinimg.com/1200x/1e/6b/78/1e6b78183c62f2415559023e61a25ac4.jpg", // ССЫЛКА НА ФОТО ИСАГИ (Кружочек)
-            welcomeMessage: "I've analyzed the field. Ask me anything about the developer.",
-            backgroundColor: "#0F0F1E", // Темно-синий фон чата (как на сайте)
-            height: 700,
-            width: 400,
-            fontSize: 16,
-            userMessage: {
-                backgroundColor: "#00D9FF", // Сообщение юзера (Голубое)
-                textColor: "#000000",
-                showAvatar: true,
-                avatarSrc: "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png",
+        theme: {
+            button: {
+                backgroundColor: "transparent", // Прозрачный фон, чтобы мяч был "сам по себе"
+                customIconSrc: "https://i.imgur.com/9SGiSPH.png", 
+                size: "large", // Оставляем большим
+                dragAndDrop: true, // Можно таскать мяч по экрану (прикольная фича)
             },
-            botMessage: {
-                backgroundColor: "#1A1A2E", // Сообщение бота (Темное)
-                textColor: "#ffffff",
-                showAvatar: true,
-                avatarSrc: "https://i.pinimg.com/1200x/1e/6b/78/1e6b78183c62f2415559023e61a25ac4.jpg", // ФОТО ИСАГИ (Аватарка сообщений)
-            },
-            textInput: {
-                placeholder: "Challenge my logic...",
-                backgroundColor: "#1A1A2E",
-                textColor: "#ffffff",
-                sendButtonColor: "#00D9FF",
+            chatWindow: {
+                backgroundColor: "#0F0F1E",
+                title: "Isagi AI",
+                titleAvatarSrc: "https://i.pinimg.com/1200x/1e/6b/78/1e6b78183c62f2415559023e61a25ac4.jpg",
+                welcomeMessage: "I've analyzed the field. Ask me anything about the developer.",
+                
+                // РАЗМЕРЫ (Уменьшил)
+                height: 500, // Было 700 (слишком высоко)
+                width: 350,  // Было 400 (слишком широко)
+                
+                fontSize: 15,
+                
+                // КНОПКА ОЧИСТКИ (Refresh)
+                // Flowise Embed не имеет встроенной кнопки refresh в конфиге, 
+                // но мы можем добавить кнопку "Clear" в меню сообщений
+                
+                userMessage: {
+                    backgroundColor: "#00D9FF",
+                    textColor: "#000000",
+                    showAvatar: true,
+                    avatarSrc: "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png",
+                },
+                botMessage: {
+                    backgroundColor: "#1A1A2E",
+                    textColor: "#ffffff",
+                    showAvatar: true,
+                    avatarSrc: "https://i.pinimg.com/1200x/1e/6b/78/1e6b78183c62f2415559023e61a25ac4.jpg",
+                },
+                textInput: {
+                    placeholder: "Challenge my logic...",
+                    backgroundColor: "#1A1A2E",
+                    textColor: "#ffffff",
+                    sendButtonColor: "#00D9FF",
+                }
             }
         }
-    }
-		
     })
 </script>
+
+<!-- CSS ХАК ДЛЯ МЯЧА (Чтобы он был на весь круг) -->
+<style>
+    /* Убираем отступы у иконки внутри кнопки */
+    .flowise-chatbot-container button img {
+        width: 100% !important;
+        height: 100% !important;
+        padding: 0 !important;
+        border-radius: 50%; /* Делает круглым */
+        transform: scale(1.4); /* Увеличивает сам мяч внутри кнопки */
+    }
+    
+    /* Добавляем тень мячу, чтобы он выделялся на темном сайте */
+    .flowise-chatbot-container button {
+        box-shadow: 0 0 15px rgba(0, 217, 255, 0.6) !important; /* Голубое свечение */
+        border: none !important;
+    }
+</style>
 	
 </body>
 
