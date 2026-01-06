@@ -251,33 +251,26 @@
     <script src="js/translations.js"></script>
     <script src="js/main.js"></script>
 	
-	<script type="module">
+<script type="module">
     import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
     Chatbot.init({
         chatflowid: "b32802b1-a970-4969-af75-2a40a25b2276",
         apiHost: "https://isagi-egoist-bot.onrender.com",
         theme: {
             button: {
-                backgroundColor: "transparent", // Прозрачный фон, чтобы мяч был "сам по себе"
-                customIconSrc: "https://i.imgur.com/9SGiSPH.png", 
-                size: "large", // Оставляем большим
-                dragAndDrop: true, // Можно таскать мяч по экрану (прикольная фича)
+                backgroundColor: "#0F0F1E", // Возвращаем темный фон кнопки (как у сайта)
+                customIconSrc: "https://i.imgur.com/9SGiSPH.png",
+                size: "large",
+                dragAndDrop: true,
             },
             chatWindow: {
                 backgroundColor: "#0F0F1E",
                 title: "Isagi AI",
                 titleAvatarSrc: "https://i.pinimg.com/1200x/1e/6b/78/1e6b78183c62f2415559023e61a25ac4.jpg",
                 welcomeMessage: "I've analyzed the field. Ask me anything about the developer.",
-                
-                // РАЗМЕРЫ (Уменьшил)
-                height: 500, // Было 700 (слишком высоко)
-                width: 350,  // Было 400 (слишком широко)
-                
+                height: 500,
+                width: 350,
                 fontSize: 15,
-                
-                // КНОПКА ОЧИСТКИ (Refresh)
-                // Flowise Embed не имеет встроенной кнопки refresh в конфиге, 
-                // но мы можем добавить кнопку "Clear" в меню сообщений
                 
                 userMessage: {
                     backgroundColor: "#00D9FF",
@@ -302,21 +295,34 @@
     })
 </script>
 
-<!-- CSS ХАК ДЛЯ МЯЧА (Чтобы он был на весь круг) -->
 <style>
-    /* Убираем отступы у иконки внутри кнопки */
+    /* 1. ФИКС МЯЧА: Делаем его огромным (80-90% кнопки) */
     .flowise-chatbot-container button img {
-        width: 100% !important;
-        height: 100% !important;
+        width: 85% !important;  /* Занимает 85% ширины кнопки */
+        height: 85% !important; /* Занимает 85% высоты кнопки */
         padding: 0 !important;
-        border-radius: 50%; /* Делает круглым */
-        transform: scale(1.4); /* Увеличивает сам мяч внутри кнопки */
+        margin: auto !important; /* Центрируем */
+        border-radius: 50%;
     }
     
-    /* Добавляем тень мячу, чтобы он выделялся на темном сайте */
+    /* Добавляем синюю обводку кнопке (как Aura) */
     .flowise-chatbot-container button {
-        box-shadow: 0 0 15px rgba(0, 217, 255, 0.6) !important; /* Голубое свечение */
-        border: none !important;
+        border: 2px solid #00D9FF !important; 
+        box-shadow: 0 0 10px rgba(0, 217, 255, 0.5) !important;
+    }
+
+    /* 2. ФИКС ПРОЗРАЧНЫХ КНОПОК ВНУТРИ (Refresh/Close) */
+    /* Делаем их фон темным, чтобы они не сливались */
+    .flowise-chatbot-container .chatbot-header-icon {
+        background-color: #1A1A2E !important; 
+        border-radius: 5px !important;
+        padding: 5px !important;
+    }
+    
+    /* Меняем цвет иконок на белый */
+    .flowise-chatbot-container .chatbot-header-icon svg {
+        fill: #ffffff !important;
+        stroke: #ffffff !important;
     }
 </style>
 	
