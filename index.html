@@ -256,6 +256,40 @@
     Chatbot.init({
         chatflowid: "b32802b1-a970-4969-af75-2a40a25b2276",
         apiHost: "https://isagi-egoist-bot.onrender.com",
+		theme: {
+        button: {
+            backgroundColor: "#00D9FF", // Ярко-голубой цвет кнопки (глаз Исаги)
+            customIconSrc: "https://i.pinimg.com/736x/04/b2/07/04b20791dbb23891e3afca22d121ef8e.jpg", // (Опционально) Твоя иконка кнопки
+        },
+        chatWindow: {
+            title: "Isagi AI", // Заголовок вместо "Hi there!"
+            titleAvatarSrc: "https://i.pinimg.com/1200x/1e/6b/78/1e6b78183c62f2415559023e61a25ac4.jpg", // ССЫЛКА НА ФОТО ИСАГИ (Кружочек)
+            welcomeMessage: "I've analyzed the field. Ask me anything about the developer.",
+            backgroundColor: "#0F0F1E", // Темно-синий фон чата (как на сайте)
+            height: 700,
+            width: 400,
+            fontSize: 16,
+            userMessage: {
+                backgroundColor: "#00D9FF", // Сообщение юзера (Голубое)
+                textColor: "#000000",
+                showAvatar: true,
+                avatarSrc: "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png",
+            },
+            botMessage: {
+                backgroundColor: "#1A1A2E", // Сообщение бота (Темное)
+                textColor: "#ffffff",
+                showAvatar: true,
+                avatarSrc: "https://i.pinimg.com/1200x/1e/6b/78/1e6b78183c62f2415559023e61a25ac4.jpg", // ФОТО ИСАГИ (Аватарка сообщений)
+            },
+            textInput: {
+                placeholder: "Challenge my logic...",
+                backgroundColor: "#1A1A2E",
+                textColor: "#ffffff",
+                sendButtonColor: "#00D9FF",
+            }
+        }
+    }
+		
     })
 </script>
 	
