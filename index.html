@@ -4,270 +4,842 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maksym Arikh - Excellence | Isagi Theme</title>
-    <meta name="description" content="Portfolio of Maksym Arikh - Developer, Leader, and Competitive Enthusiast.">
+    <title>Maksym Arikh — Business operations · AI-assisted building</title>
+    <meta name="description"
+        content="Maksym Arikh — I build things with AI tools and finish what I start. A live trading bot in production, LLM evaluation tooling and web apps; six months in VÚB corporate banking. EN / SK / RU / UA. Bratislava, open to remote.">
+    <meta name="theme-color" content="#07060b">
+    <link rel="canonical" href="https://maksym-arikh-anime-portfolio.netlify.app/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://maksym-arikh-anime-portfolio.netlify.app/">
+    <meta property="og:image" content="https://maksym-arikh-anime-portfolio.netlify.app/assets/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:title" content="Maksym Arikh — Business operations · AI-assisted building">
+    <meta property="og:description"
+        content="I build things with AI tools and finish what I start. Looking for an early-stage team where the work is undefined and someone has to own it.">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico"> <!-- Placeholder if not exists -->
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 
 <body>
+    <!-- Icon sprite -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <defs>
+            <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 17 17 7M8 7h9v9" />
+            </symbol>
+            <symbol id="i-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 5v14M5 12l7 7 7-7" />
+            </symbol>
+            <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16" />
+            </symbol>
+            <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="m3 7 9 6 9-6" />
+            </symbol>
+            <symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="11" height="11" rx="2" />
+                <path d="M5 15V5a2 2 0 0 1 2-2h10" />
+            </symbol>
+            <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="11" width="16" height="10" rx="2" />
+                <path d="M8 11V7a4 4 0 0 1 8 0v4" />
+            </symbol>
+            <symbol id="i-bank" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 10h18L12 4 3 10Zm2 0v8m4.7-8v8m4.6-8v8M19 10v8M3 20h18" />
+            </symbol>
+            <symbol id="i-spark" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2c.5 4.8 2.7 7.5 8 8.2v1.6c-5.3.7-7.5 3.4-8 8.2h-1c-.5-4.8-2.7-7.5-8-8.2v-1.6c5.3-.7 7.5-3.4 8-8.2h1Z" />
+            </symbol>
+            <symbol id="i-github" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" />
+            </symbol>
+            <symbol id="i-linkedin" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z" />
+            </symbol>
+        </defs>
+    </svg>
+
+    <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+    <div class="cursor" aria-hidden="true"></div>
 
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="#" class="logo">MA</a>
-            <ul class="nav-links">
-                <li><a href="#hero" class="active" data-i18n="nav.home">Home</a></li>
-                <li><a href="#story" data-i18n="nav.story">Story</a></li>
-                <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
-                <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
-                <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
-                <li>
-                    <select id="lang-switcher"
-                        style="background: transparent; color: white; border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; padding: 4px;">
-                        <option value="en" style="color: black;">EN</option>
-                        <option value="ru" style="color: black;">RU</option>
-                        <option value="ua" style="color: black;">UA</option>
-                        <option value="sk" style="color: black;">SK</option>
-                    </select>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+    <header class="nav" data-nav>
+        <a href="#top" class="brand" aria-label="Maksym Arikh">
+            <span class="brand-mark">MA</span>
+            <span class="brand-name">Maksym Arikh</span>
+        </a>
+        <nav class="nav-links" aria-label="Primary">
+            <a href="#work" data-i18n="nav.work">Work</a>
+            <a href="#experience" data-i18n="nav.experience">Experience</a>
+            <a href="#toolkit" data-i18n="nav.skills">Skills</a>
+            <a href="#about" data-i18n="nav.about">About</a>
+            <a href="#contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="nav-actions">
+            <div class="lang" role="group" aria-label="Language">
+                <button type="button" data-lang="en" aria-pressed="true">EN</button>
+                <button type="button" data-lang="sk" aria-pressed="false">SK</button>
+                <button type="button" data-lang="ru" aria-pressed="false">RU</button>
+                <button type="button" data-lang="ua" aria-pressed="false">UA</button>
+            </div>
+            <a class="btn btn--small btn--light nav-cv" href="assets/Maksym_Arikh_CV.pdf" download>
+                <svg class="ico"><use href="#i-download" /></svg><span data-i18n="nav.cv">CV</span>
+            </a>
+            <button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu"
+                data-burger><span></span><span></span></button>
+        </div>
+    </header>
+
+    <!-- Mobile menu -->
+    <div class="menu" id="menu" data-menu>
+        <nav class="menu-links" aria-label="Mobile">
+            <a href="#work"><small>01</small><span data-i18n="nav.work">Work</span></a>
+            <a href="#experience"><small>02</small><span data-i18n="nav.experience">Experience</span></a>
+            <a href="#toolkit"><small>03</small><span data-i18n="nav.skills">Skills</span></a>
+            <a href="#about"><small>04</small><span data-i18n="nav.about">About</span></a>
+            <a href="#contact"><small>05</small><span data-i18n="nav.contact">Contact</span></a>
+        </nav>
+        <div class="menu-foot">
+            <div class="lang" role="group" aria-label="Language">
+                <button type="button" data-lang="en" aria-pressed="true">EN</button>
+                <button type="button" data-lang="sk" aria-pressed="false">SK</button>
+                <button type="button" data-lang="ru" aria-pressed="false">RU</button>
+                <button type="button" data-lang="ua" aria-pressed="false">UA</button>
+            </div>
+            <a class="btn btn--primary" href="assets/Maksym_Arikh_CV.pdf" download>
+                <svg class="ico"><use href="#i-download" /></svg><span data-i18n="hero.cta2">Download CV</span>
+            </a>
+        </div>
+    </div>
+
+    <main id="main">
+
+        <!-- ============ HERO ============ -->
+        <section class="hero" id="top">
+            <canvas class="hero-canvas" aria-hidden="true"></canvas>
+            <div class="hero-fallback" aria-hidden="true"><i></i><i></i><i></i></div>
+
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="status-pill hero-in" style="--d:.05s">
+                        <span class="pulse"></span>
+                        <span data-i18n="hero.status">Available immediately · Bratislava (CET) · Open to remote</span>
+                    </p>
+
+                    <h1 class="hero-title">
+                        <span class="mask"><span data-i18n="hero.l1">I build with AI</span></span>
+                        <span class="mask"><span data-i18n="hero.l2">and <em class="grad-text">finish</em></span></span>
+                        <span class="mask"><span data-i18n="hero.l3">what I start.</span></span>
+                    </h1>
+
+                    <p class="hero-lead hero-in" style="--d:.55s" data-i18n="hero.lead">Business operations × AI-assisted
+                        building. I designed, deployed and still run a live trading bot built with Claude Code, spent six
+                        months inside VÚB's corporate banking segment, and work in four languages. Now I'm looking for an
+                        early-stage team where the work is undefined — and someone has to own it.</p>
+
+                    <p class="hero-rotator hero-in" style="--d:.7s" aria-hidden="true">
+                        <span class="prompt">&gt;</span>
+                        <span data-i18n="hero.rotatePrefix">currently building</span>
+                        <span class="rotator" data-rotator>trading systems</span><span class="caret"></span>
+                    </p>
+
+                    <div class="hero-cta hero-in" style="--d:.85s">
+                        <a href="#work" class="btn btn--primary magnetic">
+                            <span data-i18n="hero.cta1">See what I built</span>
+                            <svg class="ico"><use href="#i-down" /></svg>
+                        </a>
+                        <a href="assets/Maksym_Arikh_CV.pdf" download class="btn btn--ghost magnetic">
+                            <svg class="ico"><use href="#i-download" /></svg>
+                            <span data-i18n="hero.cta2">Download CV</span>
+                        </a>
+                    </div>
+
+                    <ul class="hero-socials hero-in" style="--d:1s">
+                        <li><a href="https://github.com/LiKeT128" target="_blank" rel="noopener"><svg class="ico">
+                                    <use href="#i-github" />
+                                </svg>GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/maksym-arikh-b15a2b369/" target="_blank"
+                                rel="noopener"><svg class="ico">
+                                    <use href="#i-linkedin" />
+                                </svg>LinkedIn</a></li>
+                        <li><a href="mailto:maxarikh@gmail.com"><svg class="ico">
+                                    <use href="#i-mail" />
+                                </svg>maxarikh@gmail.com</a></li>
+                    </ul>
+                </div>
+
+                <!-- Floating cards -->
+                <div class="hero-stack" aria-hidden="true">
+                    <div class="float-card fc-bank" data-depth="16">
+                        <div class="float-inner">
+                            <span class="fc-icon"><svg class="ico">
+                                    <use href="#i-bank" />
+                                </svg></span>
+                            <div class="fc-text">
+                                <strong>VÚB · Intesa Sanpaolo</strong>
+                                <span data-i18n="hero.card.bank">6 months · corporate banking</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="float-card fc-terminal" data-depth="30">
+                        <div class="float-inner">
+                            <div class="frame-bar">
+                                <span class="dots"><i></i><i></i><i></i></span>
+                                <span class="frame-title">aura@vps — signals.log</span>
+                                <span class="live-pill"><i></i>live</span>
+                            </div>
+                            <canvas class="chart" data-chart></canvas>
+                            <div class="log" data-log></div>
+                        </div>
+                    </div>
+
+                    <div class="float-card fc-langs" data-depth="22">
+                        <div class="float-inner">
+                            <span class="fc-label" data-i18n="hero.card.langs">Working languages</span>
+                            <div class="lang-chips">
+                                <span>EN<small>C1</small></span>
+                                <span>SK<small>C1</small></span>
+                                <span>RU<small data-i18n="lang.native">native</small></span>
+                                <span>UA<small data-i18n="lang.native">native</small></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="float-card fc-ai" data-depth="10">
+                        <div class="float-inner">
+                            <svg class="ico spark"><use href="#i-spark" /></svg>
+                            <span>Claude Code</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#work" class="scroll-cue" aria-label="Scroll"><span></span></a>
+        </section>
+
+        <!-- ============ MARQUEE ============ -->
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee-track" data-marquee>
+                <span>Claude Code</span>
+                <span class="alt" data-i18n="mq.prompt">Prompt engineering</span>
+                <span>Python</span>
+                <span class="alt" data-i18n="mq.verify">Verifying model output</span>
+                <span>HTML · CSS · JS</span>
+                <span class="alt" data-i18n="mq.deploy">Server deployment</span>
+                <span>Git &amp; GitHub</span>
+                <span class="alt" data-i18n="mq.fin">Financial statements</span>
+                <span>Excel</span>
+                <span class="alt">EN · SK · RU · UA</span>
             </div>
         </div>
-    </nav>
 
-    <!-- App Root for JS mounting if needed in future -->
-    <main>
-
-        <!-- Hero Section -->
-        <section id="hero" class="hero-section">
-            <div class="hero-content container">
-                <h1 class="hero-title" data-i18n="hero.title">I will. I can. I must.</h1>
-                <p class="hero-subtitle" data-i18n="hero.subtitle">From Nothing to Excellence. One Focus, Infinite
-                    Growth.</p>
-                <a href="#story" class="btn" data-i18n="hero.cta">Read My Story</a>
+        <!-- ============ STATS ============ -->
+        <section class="stats container" aria-label="Numbers">
+            <div class="stat" data-reveal>
+                <span class="stat-num"><span data-count="4">4</span></span>
+                <span class="stat-label" data-i18n="stats.langs">working languages — EN, SK, RU, UA</span>
+            </div>
+            <div class="stat" data-reveal style="--d:.1s">
+                <span class="stat-num"><span data-count="178">178</span>M</span>
+                <span class="stat-label" data-i18n="stats.ticks">market ticks my trading bot was validated on</span>
+            </div>
+            <div class="stat" data-reveal style="--d:.2s">
+                <span class="stat-num"><span data-count="200">200</span></span>
+                <span class="stat-label" data-i18n="stats.prompts">prompts in my cross-lingual LLM evaluation</span>
+            </div>
+            <div class="stat" data-reveal style="--d:.3s">
+                <span class="stat-num">24/7</span>
+                <span class="stat-label" data-i18n="stats.uptime">the bot runs on a server I deploy and monitor</span>
             </div>
         </section>
 
-        <!-- Story Section -->
-        <section id="story" class="section story-container">
-            <!-- Part 1: The Foundation -->
-            <div class="story-block">
-                <div class="story-text">
-                    <h3 data-i18n="story.p1.title">The Foundation</h3>
-                    <p class="story-location" data-i18n="story.p1.loc">Mariupol, Ukraine | Ages 0-14</p>
-                    <p data-i18n="story.p1.text">I grew up as an exemplary student—high grades across all subjects, no
-                        conflicts with peers, just
-                        a regular kid. My childhood revolved around three things: computer games, schoolwork, and close
-                        friendships. But I wasn't just a gamer; at age 13-14, my friend and I designed a custom game
-                        modification for Dota 2 that generated revenue—nearly half a month's local salary. That early
-                        success taught me something crucial: creativity + execution = measurable results.</p>
-                </div>
-                <div class="story-image">
-                    <img src="assets/images/isagi_motivational_focus_v1.png" alt="Focus and Determination">
-                </div>
-            </div>
-
-            <!-- Part 2: The Pivotal Moment -->
-            <div class="story-block reverse">
-                <div class="story-text">
-                    <h3 data-i18n="story.p2.title">The Transition</h3>
-                    <p class="story-location" data-i18n="story.p2.loc">Bratislava, Slovakia | 2022-2023</p>
-                    <p data-i18n="story.p2.text">Then the war came. We lost our home, our stability, our country. I fled
-                        to Slovakia—chosen for
-                        linguistic accessibility. I enrolled in a specialized high school focused on accounting and
-                        economics, entirely in Slovak, a language I didn't speak. By force of will and discipline, I
-                        adapted. I became "exceptional" again—not through talent alone, but through work ethic.</p>
-                </div>
-                <div class="story-image">
-                    <img src="assets/images/isaig_motivational_v2.png" alt="Overcoming Strife">
-                </div>
-            </div>
-
-            <!-- Part 3: Self-Discovery -->
-            <div class="story-block">
-                <div class="story-text">
-                    <h3 data-i18n="story.p3.title">Self-Discovery</h3>
-                    <p class="story-location" data-i18n="story.p3.loc">Esports & Team Concept</p>
-                    <p data-i18n="story.p3.text">Through competitive gaming, I discovered I thrive in team environments
-                        where communication and
-                        leadership matter. I loved pulling teams toward victory through strategy. I considered
-                        professional esports, but realized the path was unsustainable. I made a conscious choice: apply
-                        my competitive spirit and team mentality to fields with better ROI—software development and
-                        leadership.</p>
-                </div>
-                <div class="story-image">
-                    <img src="assets/images/isagi_motivational_focus_v3.png" alt="Strategic Thinking">
-                </div>
-            </div>
-
-            <!-- Part 4: The Present -->
-            <div class="story-block reverse">
-                <div class="story-text">
-                    <h3 data-i18n="story.p4.title">The Path Forward</h3>
-                    <p class="story-location" data-i18n="story.p4.loc">Comenius University & Beyond</p>
-                    <p data-i18n="story.p4.text">I'm now studying Management at Comenius University while pursuing
-                        self-directed excellence in AI
-                        integration and full-stack development. I refuse to let comfortable circumstances become
-                        complacency. I'm positioning myself at the intersection of technology and human management—a
-                        space where few are both technically capable and socially competent.</p>
-                </div>
-                <div class="story-image">
-                    <img src="assets/images/isagi_motivational_focus_v4.jpg" alt="Forward Momentum">
-                </div>
-            </div>
-
-            <!-- Part 5: Why Isagi? -->
-            <div class="story-finale-container">
-                <div class="finale-image-wrapper">
-                    <img src="assets/images/isagi_motivaitonal_v2.jpg" alt="Isagi Yoichi Philosophy" class="finale-img">
-                </div>
-                <div class="finale-content container">
-                    <h3 data-i18n="story.finale.title">Why Isagi Yoichi?</h3>
-                    <p data-i18n="story.finale.text">I'm not just an anime fan. Blue Lock teaches a philosophy I live
-                        by: start from zero, embrace
-                        constant evolution, maintain unshakeable discipline, and never accept mediocrity. His weapon
-                        isn't flashy talent—it's obsessive self-improvement. That resonates.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="section">
+        <!-- ============ WORK ============ -->
+        <section class="section" id="work">
             <div class="container">
-                <h2 class="section-title" data-i18n="skills.title">Skills & Characteristics</h2>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <div class="skill-icon">🧠</div>
-                        <h4 data-i18n="skill.leadership">Leadership</h4>
-                        <p data-i18n="skill.leadership.desc">Team coordination, decision-making under pressure.</p>
+                <header class="section-head" data-reveal>
+                    <p class="eyebrow"><span>01</span><span data-i18n="work.eyebrow">What I build</span></p>
+                    <h2 class="section-title"><span class="mask"><span data-i18n="work.title">Things I built — and
+                                still run</span></span></h2>
+                    <p class="section-lead" data-i18n="work.lead">I build with AI coding tools, but I don't take the first
+                        answer. Everything here was specified, reviewed, deployed and iterated on by me.</p>
+                </header>
+
+                <!-- Project 1: AURA -->
+                <article class="project" style="--accent: var(--coral)">
+                    <div class="project-visual" data-reveal>
+                        <div class="visual-frame" data-tilt>
+                            <div class="frame-bar">
+                                <span class="dots"><i></i><i></i><i></i></span>
+                                <span class="frame-title">aura — walk-forward · EURUSD</span>
+                                <span class="live-pill"><i></i>live</span>
+                            </div>
+                            <canvas class="chart chart--big" data-chart="big"></canvas>
+                            <div class="log log--big" data-log></div>
+                        </div>
                     </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">💻</div>
-                        <h4 data-i18n="skill.tech">Technical Depth</h4>
-                        <p data-i18n="skill.tech.desc">Full-stack development, AI integration, Vanilla JS.</p>
+                    <div class="project-body" data-reveal style="--d:.1s">
+                        <div class="project-meta">
+                            <span class="tag tag--live" data-i18n="p1.status">In production</span>
+                            <span class="project-when" data-i18n="p1.when">Own project · 2026 – present</span>
+                        </div>
+                        <h3 class="project-title" data-i18n="p1.title">AURA — live trading bot</h3>
+                        <p class="project-lead" data-i18n="p1.lead">A short-horizon FX trading system I designed,
+                            deployed and still run. Built with Claude Code and validated walk-forward on 178 million
+                            recorded ticks and 265 out-of-sample trading days.</p>
+                        <ul class="project-points">
+                            <li data-i18n="p1.pt1">Runs 24/7 on a VPS with Telegram alerts — server deployment, monitoring
+                                and continuous iteration, the part most side projects never reach.</li>
+                            <li data-i18n="p1.pt2">Every AI-generated change is reviewed for factual errors, weak
+                                reasoning and instructions that were skipped.</li>
+                            <li data-i18n="p1.pt3">When bid-side pricing cut my headline result, I re-settled every
+                                trade and published the lower number. Failed variants are documented too.</li>
+                        </ul>
+                        <ul class="stack">
+                            <li>Python</li>
+                            <li>Claude Code</li>
+                            <li>VPS</li>
+                            <li>Telegram API</li>
+                            <li data-i18n="p1.stack">Walk-forward testing</li>
+                        </ul>
+                        <div class="project-links">
+                            <span class="link-muted"><svg class="ico"><use href="#i-lock" /></svg><span
+                                    data-i18n="p1.private">Private repository · walkthrough on request</span></span>
+                        </div>
                     </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">🛡️</div>
-                        <h4 data-i18n="skill.resilience">Resilience</h4>
-                        <p data-i18n="skill.resilience.desc">Adaptability in new environments, overcoming adversity.</p>
+                </article>
+
+                <!-- Project 2: xlingual-consistency -->
+                <article class="project project--flip" style="--accent: var(--violet)">
+                    <div class="project-visual" data-reveal>
+                        <div class="visual-frame" data-tilt>
+                            <div class="frame-bar">
+                                <span class="dots"><i></i><i></i><i></i></span>
+                                <span class="frame-title">xlc report — consistency</span>
+                            </div>
+                            <div class="lang-grid" data-langgrid></div>
+                            <div class="pipeline">
+                                <span>validate</span><span>run</span><span>grade</span><span>annotate</span><span>report</span>
+                            </div>
+                            <div class="grid-legend">
+                                <span><i class="ok"></i><span data-i18n="p2.legend.ok">same verdict</span></span>
+                                <span><i class="bad"></i><span data-i18n="p2.legend.bad">diverged</span></span>
+                                <span class="muted" data-i18n="p2.legend.note">illustration · 50 items × 4 languages</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">🎯</div>
-                        <h4 data-i18n="skill.focus">Focus</h4>
-                        <p data-i18n="skill.focus.desc">Unwavering discipline and commitment to goals.</p>
+                    <div class="project-body" data-reveal style="--d:.1s">
+                        <div class="project-meta">
+                            <span class="tag" data-i18n="p2.status">Open source</span>
+                            <span class="project-when" data-i18n="p2.when">Own project · 2026</span>
+                        </div>
+                        <h3 class="project-title">xlingual-consistency</h3>
+                        <p class="project-lead" data-i18n="p2.lead">Does an LLM give the same answer in English,
+                            Russian, Ukrainian and Slovak? A 200-prompt evaluation set that measures where a model's
+                            answers drift between languages.</p>
+                        <ul class="project-points">
+                            <li data-i18n="p2.pt1">Prompts written natively in all four languages — not
+                                machine-translated — so translation artefacts don't pass for model errors.</li>
+                            <li data-i18n="p2.pt2">152 answers graded by code, 48 by a model judge whose reliability is
+                                checked against blind human labels with Cohen's kappa.</li>
+                            <li data-i18n="p2.pt3">Every rate carries a Wilson 95% interval. Runs are resumable and
+                                rate-limit aware for free API tiers; 77 tests and CI.</li>
+                        </ul>
+                        <ul class="stack">
+                            <li>Python</li>
+                            <li data-i18n="p2.stack1">LLM evaluation</li>
+                            <li data-i18n="p2.stack2">Statistics</li>
+                            <li>pytest</li>
+                            <li>GitHub Actions</li>
+                        </ul>
+                        <div class="project-links">
+                            <a class="link-arrow" href="https://github.com/LiKeT128/xlingual-consistency"
+                                target="_blank" rel="noopener"><svg class="ico"><use href="#i-github" /></svg><span
+                                    data-i18n="link.code">View the code</span><svg class="ico">
+                                    <use href="#i-arrow" />
+                                </svg></a>
+                        </div>
                     </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">🗣️</div>
-                        <h4 data-i18n="skill.comm">Communication</h4>
-                        <p data-i18n="skill.comm.desc">Clear articulation, team mentality, bridge-building.</p>
+                </article>
+
+                <!-- Project 3: MatchMentor -->
+                <article class="project" style="--accent: var(--cyan)">
+                    <div class="project-visual" data-reveal>
+                        <a class="visual-frame browser" data-tilt href="https://matchmentor-frontend.vercel.app"
+                            target="_blank" rel="noopener" aria-label="MatchMentor — live site">
+                            <div class="frame-bar">
+                                <span class="dots"><i></i><i></i><i></i></span>
+                                <span class="url-bar">matchmentor-frontend.vercel.app</span>
+                            </div>
+                            <div class="shot"><img src="assets/images/projects/matchmentor.jpg"
+                                    alt="MatchMentor landing page: Analyze your Dota 2 replays" loading="lazy"
+                                    width="1440" height="900"></div>
+                        </a>
                     </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">📈</div>
-                        <h4 data-i18n="skill.growth">Growth Mindset</h4>
-                        <p data-i18n="skill.growth.desc">Constant learning, self-correction, evolution.</p>
+                    <div class="project-body" data-reveal style="--d:.1s">
+                        <div class="project-meta">
+                            <span class="tag tag--live" data-i18n="p3.status">Live</span>
+                            <span class="project-when" data-i18n="p3.when">Own project · full-stack</span>
+                        </div>
+                        <h3 class="project-title">MatchMentor</h3>
+                        <p class="project-lead" data-i18n="p3.lead">A full-stack Dota 2 replay analyzer: upload a
+                            match, get AI-powered insights on how you played, and find a coach.</p>
+                        <ul class="project-points">
+                            <li data-i18n="p3.pt1">FastAPI backend with Java-based replay parsing (Clarity) feeding
+                                AI-driven match metrics.</li>
+                            <li data-i18n="p3.pt2">React + TypeScript + Tailwind frontend, deployed on Vercel.</li>
+                            <li data-i18n="p3.pt3">Product thinking from years of competitive play: a real user, a real
+                                problem and a business model — a coaching marketplace.</li>
+                        </ul>
+                        <ul class="stack">
+                            <li>FastAPI</li>
+                            <li>React</li>
+                            <li>TypeScript</li>
+                            <li>Java · Clarity</li>
+                            <li>Vercel</li>
+                        </ul>
+                        <div class="project-links">
+                            <a class="link-arrow" href="https://matchmentor-frontend.vercel.app" target="_blank"
+                                rel="noopener"><span data-i18n="link.live">Open live site</span><svg class="ico">
+                                    <use href="#i-arrow" />
+                                </svg></a>
+                            <a class="link-arrow" href="https://github.com/LiKeT128/matchmentor-fullstack"
+                                target="_blank" rel="noopener"><svg class="ico"><use href="#i-github" /></svg><span
+                                    data-i18n="link.code">View the code</span><svg class="ico">
+                                    <use href="#i-arrow" />
+                                </svg></a>
+                        </div>
                     </div>
+                </article>
+
+                <!-- More projects -->
+                <h3 class="subhead" data-reveal data-i18n="work.more">More from the workshop</h3>
+                <div class="mini-grid">
+                    <a class="mini" data-reveal href="https://github.com/LiKeT128/Car-Rental-Customer-Request-Router-Test-AI-task"
+                        target="_blank" rel="noopener">
+                        <span class="mini-tech">Next.js 15 · Gemini · Prisma · Zod</span>
+                        <h4 data-i18n="m1.title">AI request router</h4>
+                        <p data-i18n="m1.desc">Reads free-text messages from car-rental customers, classifies them
+                            into five intents with Gemini, routes each to the right action and logs it to SQLite.</p>
+                        <span class="mini-foot">GitHub <svg class="ico"><use href="#i-arrow" /></svg></span>
+                    </a>
+                    <a class="mini" data-reveal style="--d:.08s" href="https://github.com/LiKeT128/espocrm-autocrm-module"
+                        target="_blank" rel="noopener">
+                        <span class="mini-tech">PHP · EspoCRM</span>
+                        <h4 data-i18n="m2.title">CRM automation module</h4>
+                        <p data-i18n="m2.desc">A custom EspoCRM module that finds existing contacts by email straight
+                            from a Lead record — less manual lookup for whoever works the pipeline.</p>
+                        <span class="mini-foot">GitHub <svg class="ico"><use href="#i-arrow" /></svg></span>
+                    </a>
+                    <a class="mini" data-reveal style="--d:.16s" href="https://github.com/LiKeT128/Aether-Isles"
+                        target="_blank" rel="noopener">
+                        <span class="mini-tech">Luau · Rojo · Roblox</span>
+                        <h4 data-i18n="m3.title">Roblox game systems</h4>
+                        <p data-i18n="m3.desc">Aether Isles: a Skyblock-style MVP with private islands, a
+                            server-authoritative economy, workers, crops and config-driven balancing.</p>
+                        <span class="mini-foot">GitHub <svg class="ico"><use href="#i-arrow" /></svg></span>
+                    </a>
+                    <a class="mini" data-reveal href="https://github.com/LiKeT128/telegram-bot-test-task"
+                        target="_blank" rel="noopener">
+                        <span class="mini-tech">Python · Telegram API</span>
+                        <h4 data-i18n="m4.title">Telegram bot</h4>
+                        <p data-i18n="m4.desc">User registration, a database, an on-demand random-quote button and an
+                            admin panel — built and documented as a take-home task.</p>
+                        <span class="mini-foot">GitHub <svg class="ico"><use href="#i-arrow" /></svg></span>
+                    </a>
+                    <div class="mini" data-reveal style="--d:.08s">
+                        <span class="mini-tech">Next.js · Tailwind · Framer Motion</span>
+                        <h4>The Cave</h4>
+                        <p data-i18n="m5.desc">Landing page, partner onboarding flow and a Telegram notification bot for
+                            a tech startup.</p>
+                        <span class="mini-foot mini-foot--muted"><svg class="ico"><use href="#i-lock" /></svg><span
+                                data-i18n="m.private">Private</span></span>
+                    </div>
+                    <a class="mini" data-reveal style="--d:.16s"
+                        href="https://github.com/LiKeT128/anime-style-portfolio-website-dec-2026" target="_blank"
+                        rel="noopener">
+                        <span class="mini-tech">HTML · CSS · JS · WebGL</span>
+                        <h4 data-i18n="m6.title">This website</h4>
+                        <p data-i18n="m6.desc">Hand-written without frameworks: a WebGL shader, scroll-driven
+                            animation and four languages.</p>
+                        <span class="mini-foot">GitHub <svg class="ico"><use href="#i-arrow" /></svg></span>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="section">
+        <!-- ============ EXPERIENCE ============ -->
+        <section class="section section--alt" id="experience">
             <div class="container">
-                <h2 class="section-title" data-i18n="projects.title">Learning & Exploration</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h4 data-i18n="project.dota.title">Dota 2 Custom Mode</h4>
-                            <p class="project-tech" data-i18n="project.dota.tech">Lua | Game Design | Community
-                                Management</p>
-                            <p data-i18n="project.dota.desc">Designed and monetized a custom game modification at age
-                                14. Learned the fundamentals of
-                                product lifecycle and user engagement.</p>
-                            <span class="project-status" data-i18n="project.dota.status">Archived</span>
+                <header class="section-head" data-reveal>
+                    <p class="eyebrow"><span>02</span><span data-i18n="exp.eyebrow">Experience</span></p>
+                    <h2 class="section-title"><span class="mask"><span data-i18n="exp.title">Where I've done the
+                                work</span></span></h2>
+                    <p class="section-lead" data-i18n="exp.lead">Banking taught me discipline with documents and
+                        deadlines. Game studios taught me to ship against a written spec with a remote team.</p>
+                </header>
+
+                <ol class="timeline" data-timeline>
+                    <span class="tl-progress" aria-hidden="true"></span>
+
+                    <li class="tl-item" data-reveal>
+                        <span class="tl-node" aria-hidden="true"></span>
+                        <div class="tl-card">
+                            <div class="tl-head">
+                                <span class="tl-logo" style="--g1:#1d6fe0;--g2:#22d3ee">VÚB</span>
+                                <div>
+                                    <h3 data-i18n="e1.role">Assistant, Upper SME Segment</h3>
+                                    <p class="tl-org">Všeobecná úverová banka (VÚB) · Intesa Sanpaolo Group</p>
+                                </div>
+                                <p class="tl-when"><span data-i18n="e1.when">Mar 2026 – Sep 2026</span><span
+                                        data-i18n="loc.ba">Bratislava</span></p>
+                            </div>
+                            <ul class="tl-points">
+                                <li data-i18n="e1.pt1">Chased annual financial statements and supporting documents from
+                                    corporate clients by phone and email until they arrived.</li>
+                                <li data-i18n="e1.pt2">Verified company data against FinStat and followed up on anything
+                                    that did not match.</li>
+                                <li data-i18n="e1.pt3">Kept client files complete and on deadline, so missing items
+                                    surfaced before they blocked the process.</li>
+                                <li data-i18n="e1.pt4">Supported relationship managers day to day and handled
+                                    confidential data inside regulated banking procedures.</li>
+                            </ul>
+                            <ul class="tl-tags">
+                                <li data-i18n="e1.t1">Corporate banking</li>
+                                <li>FinStat</li>
+                                <li data-i18n="e1.t2">Client follow-up</li>
+                                <li data-i18n="e1.t3">Confidential data</li>
+                            </ul>
                         </div>
+                    </li>
+
+                    <li class="tl-item" data-reveal>
+                        <span class="tl-node" aria-hidden="true"></span>
+                        <div class="tl-card">
+                            <div class="tl-head">
+                                <span class="tl-logo" style="--g1:#8b5cf6;--g2:#ff3d8b">RCM</span>
+                                <div>
+                                    <h3 data-i18n="e2.role">Game Designer (Roblox)</h3>
+                                    <p class="tl-org">RCM Games</p>
+                                </div>
+                                <p class="tl-when"><span data-i18n="e2.when">Apr 2025 – Sep 2025</span><span
+                                        data-i18n="loc.remote">Remote</span></p>
+                            </div>
+                            <ul class="tl-points">
+                                <li data-i18n="e2.pt1">Designed and iterated gameplay systems and player progression for
+                                    a live title with real users.</li>
+                                <li data-i18n="e2.pt2">Worked asynchronously in a distributed international team against
+                                    written specs.</li>
+                            </ul>
+                            <ul class="tl-tags">
+                                <li>Roblox</li>
+                                <li data-i18n="e2.t1">Game systems</li>
+                                <li data-i18n="e2.t2">Async remote team</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="tl-item" data-reveal>
+                        <span class="tl-node" aria-hidden="true"></span>
+                        <div class="tl-card">
+                            <div class="tl-head">
+                                <span class="tl-logo" style="--g1:#22d3ee;--g2:#a3e635">TT</span>
+                                <div>
+                                    <h3 data-i18n="e3.role">Salesperson / Administrative Assistant</h3>
+                                    <p class="tl-org">ThauTech s. r. o.</p>
+                                </div>
+                                <p class="tl-when"><span data-i18n="e3.when">Jul – Aug 2025</span><span
+                                        data-i18n="loc.ba">Bratislava</span></p>
+                            </div>
+                            <ul class="tl-points">
+                                <li data-i18n="e3.pt1">Direct client conversations and sales in Slovak, plus day-to-day
+                                    admin.</li>
+                            </ul>
+                            <ul class="tl-tags">
+                                <li data-i18n="e3.t1">Sales</li>
+                                <li data-i18n="e3.t2">Slovak</li>
+                                <li data-i18n="e3.t3">Admin</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="tl-item" data-reveal>
+                        <span class="tl-node" aria-hidden="true"></span>
+                        <div class="tl-card">
+                            <div class="tl-head">
+                                <span class="tl-logo" style="--g1:#ff6b3d;--g2:#ffb13d">SM</span>
+                                <div>
+                                    <h3 data-i18n="e4.role">Archive Assistant</h3>
+                                    <p class="tl-org">SLOVKOR-M, s. r. o.</p>
+                                </div>
+                                <p class="tl-when"><span data-i18n="e4.when">May – Sep 2024</span><span
+                                        data-i18n="loc.ba">Bratislava</span></p>
+                            </div>
+                            <ul class="tl-points">
+                                <li data-i18n="e4.pt1">Classified and routed company documents against multiple criteria.
+                                </li>
+                            </ul>
+                            <ul class="tl-tags">
+                                <li data-i18n="e4.t1">Document control</li>
+                                <li data-i18n="e4.t2">Archiving</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ol>
+
+                <h3 class="subhead" data-reveal data-i18n="edu.title">Education</h3>
+                <div class="edu-grid">
+                    <div class="edu" data-reveal>
+                        <span class="edu-when" data-i18n="edu1.when">2025 – 2026 · one year completed</span>
+                        <h4 data-i18n="edu1.school">Comenius University in Bratislava</h4>
+                        <p data-i18n="edu1.field">Management (taught in English)</p>
                     </div>
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h4 data-i18n="project.matchmentor.title">MatchMentor</h4>
-                            <p class="project-tech" data-i18n="project.matchmentor.tech">FastAPI | React | Clarity (Java)</p>
-                            <p data-i18n="project.matchmentor.desc">Full-stack Dota 2 replay analyzer. Features custom Java-based parsing, AI-driven metrics, and a coaching marketplace.</p>
-                            <span class="project-status" data-i18n="project.matchmentor.status">Developing</span>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h4 data-i18n="project.cave.title">The Cave Website</h4>
-                            <p class="project-tech" data-i18n="project.cave.tech">Next.js | Tailwind | Framer Motion</p>
-                            <p data-i18n="project.cave.desc">Premium landing page for a tech startup. High-end animations, custom cursor interactions, and sleek dark aesthetics.</p>
-                            <span class="project-status" data-i18n="project.cave.status">Active</span>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h4 data-i18n="project.algo.title">Anime-style Portfolio</h4>
-                            <p class="project-tech" data-i18n="project.algo.tech">HTML5 | CSS3 | Vanilla JS</p>
-                            <p data-i18n="project.algo.desc">This website. A study in performance, animation, and
-                                narrative-driven design without
-                                external frameworks.</p>
-                            <span class="project-status" data-i18n="project.algo.status">Live</span>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h4 data-i18n="project.ai.title">AI Workflow Integration</h4>
-                            <p class="project-tech" data-i18n="project.ai.tech">LLMs | Python | Automation</p>
-                            <p data-i18n="project.ai.desc">Developing personal workflows to enhance coding efficiency
-                                and decision making using
-                                advanced AI models.</p>
-                            <span class="project-status" data-i18n="project.ai.status">In Progress</span>
-                        </div>
+                    <div class="edu" data-reveal style="--d:.1s">
+                        <span class="edu-when" data-i18n="edu2.when">2022 – 2025 · graduated with top marks</span>
+                        <h4 data-i18n="edu2.school">Imrich Karvaš Business Academy, Bratislava</h4>
+                        <p data-i18n="edu2.field">Accounting and Economics</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="section">
-            <div class="container contact-container">
-                <h2 class="section-title" data-i18n="contact.title">Let's Connect</h2>
-                <div class="contact-content">
-                    <p data-i18n="contact.text">Ready to build something exceptional? I'm open to opportunities that
-                        challenge my limits.</p>
-                    <a href="mailto:maksymarikh@gmail.com" class="btn contact-btn" data-i18n="contact.btn">Send Me an
-                        Email</a>
+        <!-- ============ PRINCIPLES ============ -->
+        <section class="section" id="principles">
+            <div class="container">
+                <header class="section-head" data-reveal>
+                    <p class="eyebrow"><span>03</span><span data-i18n="pr.eyebrow">How I work</span></p>
+                    <h2 class="section-title"><span class="mask"><span data-i18n="pr.title">Four habits I bring to a
+                                small team</span></span></h2>
+                </header>
+                <div class="principles">
+                    <article class="principle" data-reveal>
+                        <span class="principle-num">01</span>
+                        <h3 data-i18n="pr1.title">Finish what I start</h3>
+                        <p data-i18n="pr1.text">A bot in production, not a notebook. The last stretch — deployment,
+                            monitoring, iteration — is where I spend my time.</p>
+                    </article>
+                    <article class="principle" data-reveal style="--d:.08s">
+                        <span class="principle-num">02</span>
+                        <h3 data-i18n="pr2.title">Verify, don't trust</h3>
+                        <p data-i18n="pr2.text">I read AI output for factual errors, weak reasoning and skipped
+                            instructions, and iterate on the spec until the answer is right — not just plausible.</p>
+                    </article>
+                    <article class="principle" data-reveal style="--d:.16s">
+                        <span class="principle-num">03</span>
+                        <h3 data-i18n="pr3.title">Chase it until it lands</h3>
+                        <p data-i18n="pr3.text">At VÚB the job was getting documents from corporate clients on
+                            deadline. I follow up by phone and email until the thing actually arrives.</p>
+                    </article>
+                    <article class="principle" data-reveal style="--d:.24s">
+                        <span class="principle-num">04</span>
+                        <h3 data-i18n="pr4.title">Own the undefined</h3>
+                        <p data-i18n="pr4.text">I learn systems fast and like the messy middle. Give me the problem
+                            nobody has written a process for yet.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/maksym-arikh-b15a2b369/" target="_blank"
-                            class="social-icon">LinkedIn</a>
-                        <a href="https://github.com/LiKeT128" target="_blank" class="social-icon">GitHub</a>
-                        <a href="https://www.instagram.com/liketukr/" target="_blank" class="social-icon">Instagram</a>
+        <!-- ============ TOOLKIT ============ -->
+        <section class="section section--alt" id="toolkit">
+            <div class="container">
+                <header class="section-head" data-reveal>
+                    <p class="eyebrow"><span>04</span><span data-i18n="tk.eyebrow">Toolkit</span></p>
+                    <h2 class="section-title"><span class="mask"><span data-i18n="tk.title">What I work
+                                with</span></span></h2>
+                </header>
+
+                <div class="toolkit">
+                    <div class="tk-card" data-reveal>
+                        <h3><svg class="ico spark"><use href="#i-spark" /></svg><span data-i18n="tk.ai">AI &amp;
+                                tools</span></h3>
+                        <ul class="chips">
+                            <li>Claude</li>
+                            <li>ChatGPT</li>
+                            <li>Claude Code</li>
+                            <li data-i18n="mq.prompt">Prompt engineering</li>
+                            <li data-i18n="mq.verify">Verifying model output</li>
+                            <li data-i18n="tk.automate">Automating routine work</li>
+                        </ul>
+                    </div>
+                    <div class="tk-card" data-reveal style="--d:.08s">
+                        <h3><span class="tk-dot" style="--c:var(--cyan)"></span><span
+                                data-i18n="tk.tech">Technical</span></h3>
+                        <ul class="chips">
+                            <li data-i18n="tk.python">Python (basic)</li>
+                            <li>HTML / CSS / JavaScript</li>
+                            <li>Git &amp; GitHub</li>
+                            <li data-i18n="mq.deploy">Server deployment</li>
+                            <li data-i18n="tk.excel">Excel (advanced)</li>
+                        </ul>
+                    </div>
+                    <div class="tk-card" data-reveal style="--d:.16s">
+                        <h3><span class="tk-dot" style="--c:var(--coral)"></span><span
+                                data-i18n="tk.biz">Business</span></h3>
+                        <ul class="chips">
+                            <li data-i18n="tk.acc">Accounting &amp; economics training</li>
+                            <li data-i18n="mq.fin">Financial statements</li>
+                            <li data-i18n="tk.comm">Client &amp; partner communication</li>
+                            <li data-i18n="tk.docs">Document &amp; data discipline</li>
+                        </ul>
+                    </div>
+                    <div class="tk-card tk-card--langs" data-reveal style="--d:.24s">
+                        <h3><span class="tk-dot" style="--c:var(--violet)"></span><span
+                                data-i18n="tk.langs">Languages</span></h3>
+                        <ul class="bars">
+                            <li style="--v:.86"><span class="bar-code">EN</span><span class="bar-name"
+                                    data-i18n="lang.en">English</span><span class="bar-level">C1</span><span
+                                    class="bar"><i></i></span></li>
+                            <li style="--v:.86"><span class="bar-code">SK</span><span class="bar-name"
+                                    data-i18n="lang.sk">Slovak</span><span class="bar-level">C1</span><span
+                                    class="bar"><i></i></span></li>
+                            <li style="--v:1"><span class="bar-code">RU</span><span class="bar-name"
+                                    data-i18n="lang.ru">Russian</span><span class="bar-level"
+                                    data-i18n="lang.native">native</span><span class="bar"><i></i></span></li>
+                            <li style="--v:1"><span class="bar-code">UA</span><span class="bar-name"
+                                    data-i18n="lang.ua">Ukrainian</span><span class="bar-level"
+                                    data-i18n="lang.native">native</span><span class="bar"><i></i></span></li>
+                            <li style="--v:.34"><span class="bar-code">DE</span><span class="bar-name"
+                                    data-i18n="lang.de">German</span><span class="bar-level">A2</span><span
+                                    class="bar"><i></i></span></li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ============ ABOUT ============ -->
+        <section class="section" id="about">
+            <div class="container about-grid">
+                <figure class="about-visual" data-reveal>
+                    <!-- The impact flash plays once, then a seamless ping-pong loop takes over -->
+                    <div class="about-img" data-about-video>
+                        <video class="about-media about-loop" muted loop playsinline preload="none"
+                            poster="assets/video/about-poster.jpg" aria-label="Isagi Yoichi from Blue Lock">
+                            <source src="assets/video/about-loop.mp4" type="video/mp4">
+                        </video>
+                        <video class="about-media about-intro" muted playsinline preload="none" aria-hidden="true">
+                            <source src="assets/video/about-intro.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <figcaption>
+                        <strong data-i18n="about.cap.title">Why Isagi?</strong>
+                        <span data-i18n="about.cap.text">The one anime reference on this page. Blue Lock's Isagi
+                            Yoichi starts from zero, and his weapon isn't raw talent — it's obsessive
+                            self-improvement. That resonates.</span>
+                    </figcaption>
+                </figure>
+
+                <div class="about-copy">
+                    <header class="section-head" data-reveal>
+                        <p class="eyebrow"><span>05</span><span data-i18n="about.eyebrow">About</span></p>
+                        <h2 class="section-title"><span class="mask"><span data-i18n="about.title">From Mariupol to
+                                    Bratislava</span></span></h2>
+                    </header>
+                    <ol class="beats">
+                        <li data-reveal>
+                            <span class="beat-when" data-i18n="about.b1.when">Age 13–14</span>
+                            <p data-i18n="about.b1.text">A friend and I built a Dota 2 custom game mode that earned real
+                                money — about half a month's local salary. First lesson: creativity plus execution equals
+                                measurable results.</p>
+                        </li>
+                        <li data-reveal>
+                            <span class="beat-when">2022</span>
+                            <p data-i18n="about.b2.text">The war took our home in Mariupol. I moved to Bratislava and
+                                enrolled in an accounting and economics school taught entirely in Slovak — a language I
+                                didn't speak yet.</p>
+                        </li>
+                        <li data-reveal>
+                            <span class="beat-when">2025</span>
+                            <p data-i18n="about.b3.text">Graduated with top marks. Slovak is now C1, and I went on to
+                                study Management in English at Comenius University.</p>
+                        </li>
+                        <li data-reveal>
+                            <span class="beat-when">2026</span>
+                            <p data-i18n="about.b4.text">Six months inside VÚB's corporate segment, a trading bot in
+                                production, and a clear answer to what's next: an early-stage team where the work is
+                                undefined and someone has to own it.</p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CONTACT ============ -->
+        <section class="section contact" id="contact">
+            <div class="contact-blobs" aria-hidden="true"><i></i><i></i><i></i></div>
+            <div class="container contact-inner">
+                <p class="eyebrow eyebrow--center" data-reveal><span>06</span><span
+                        data-i18n="contact.eyebrow">Contact</span></p>
+                <h2 class="contact-title" data-reveal data-i18n="contact.title">Got something undefined<br>that needs an
+                    <span class="grad-text">owner?</span></h2>
+                <p class="contact-text" data-reveal data-i18n="contact.text">Tell me what you're building. Email is the
+                    fastest way to reach me.</p>
+                <div class="contact-actions" data-reveal>
+                    <a class="btn btn--primary btn--big magnetic" href="mailto:maxarikh@gmail.com">
+                        <svg class="ico"><use href="#i-mail" /></svg>maxarikh@gmail.com
+                    </a>
+                    <button class="btn btn--ghost btn--big magnetic" type="button" data-copy="maxarikh@gmail.com">
+                        <svg class="ico"><use href="#i-copy" /></svg><span data-copy-label
+                            data-i18n="contact.copy">Copy email</span>
+                    </button>
+                </div>
+                <ul class="contact-links" data-reveal>
+                    <li><a href="https://www.linkedin.com/in/maksym-arikh-b15a2b369/" target="_blank" rel="noopener"><svg
+                                class="ico">
+                                <use href="#i-linkedin" />
+                            </svg>LinkedIn</a></li>
+                    <li><a href="https://github.com/LiKeT128" target="_blank" rel="noopener"><svg class="ico">
+                                <use href="#i-github" />
+                            </svg>GitHub</a></li>
+                    <li><a href="assets/Maksym_Arikh_CV.pdf" download><svg class="ico">
+                                <use href="#i-download" />
+                            </svg><span data-i18n="contact.cv">CV (PDF)</span></a></li>
+                </ul>
+                <ul class="facts" data-reveal>
+                    <li data-i18n="fact.loc">Bratislava, Slovakia (CET)</li>
+                    <li data-i18n="fact.eu">EU work authorisation</li>
+                    <li data-i18n="fact.remote">Open to remote</li>
+                    <li data-i18n="fact.avail">Available immediately</li>
+                </ul>
+            </div>
+        </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p data-i18n="footer.rights">&copy; 2026 Maksym Arikh.</p>
-                <p class="footer-tagline" data-i18n="footer.tagline">Driven by Discipline. Propelled by Focus.</p>
-            </div>
-            <a href="#hero" class="back-to-top">▲</a>
+        <div class="container footer-inner">
+            <p>© <span data-year>2026</span> Maksym Arikh</p>
+            <p class="footer-built" data-i18n="footer.built">Designed and hand-built with HTML, CSS, JS and WebGL — with
+                Claude Code as a pair.</p>
+            <a href="#top" class="to-top" aria-label="Back to top"><svg class="ico">
+                    <use href="#i-arrow" />
+                </svg></a>
         </div>
     </footer>
 
+    <div class="toast" role="status" aria-live="polite" data-toast></div>
+
     <script src="js/translations.js"></script>
     <script src="js/main.js"></script>
-	
-	
 </body>
 
 </html>
